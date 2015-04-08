@@ -179,7 +179,7 @@
         var figure = ed.getParam("uploadimage_figure", false);
         var alt_text = getInputValue("alt");
 
-        var imgstr = "<img src='" + json["image"]["url"] + "'";
+        var imgstr = "<a href='" + json["image"]["url"] + "' class='expandable' rel='gallery'><img src='" + json["image"]["url"] + "'";
 
         if(default_class != "")
           imgstr += " class='" + default_class + "'";
@@ -189,7 +189,9 @@
         if(json["image"]["width"])
           imgstr += " width='"  + json["image"]["width"]  + "'";
 
-        imgstr += " alt='" + alt_text + "'/>";
+        imgstr += " alt='" + alt_text + "'/><div class='expandable-marker'>
+                  <span class='expandable-marker-icon'></span>
+                  <span class='expandable-marker-cta'>Expandir</span></div></a>";
 
         if(figure) {
           var figureClass = ed.getParam("uploadimage_figure_class", "figure");
