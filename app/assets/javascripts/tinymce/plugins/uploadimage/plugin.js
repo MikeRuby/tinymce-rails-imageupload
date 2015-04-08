@@ -189,9 +189,7 @@
         if(json["image"]["width"])
           imgstr += " width='"  + json["image"]["width"]  + "'";
 
-        imgstr += " alt='" + alt_text + "'/><div class='expandable-marker'>
-                  <span class='expandable-marker-icon'></span>
-                  <span class='expandable-marker-cta'>Expandir</span></div></a>";
+        imgstr += " alt='" + alt_text + "'/><div class='expandable-marker'><span class='expandable-marker-icon'></span><span class='expandable-marker-cta'>Expandir</span></div></a>";
 
         if(figure) {
           var figureClass = ed.getParam("uploadimage_figure_class", "figure");
